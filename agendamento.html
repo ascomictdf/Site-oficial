@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agendamento de Consultas e Exames — ICTDF</title>
+<meta name="description" content="Faça a pré-marcação de consultas e exames no ICTDF ou solicite um orçamento particular.">
+<meta name="theme-color" content="#06182B">
+<link rel="icon" href="assets/img/logo-ictdf.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:ital,wght@0,500;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="agendamento">
+<!-- @header -->
+<div class="loader" aria-hidden="true">
+  <script>try{if(sessionStorage.getItem("ictdf-loader"))document.documentElement.classList.add("no-loader");sessionStorage.setItem("ictdf-loader","1")}catch(e){}</script>
+  <div class="loader__heart"><span class="loader__ring"></span><span class="loader__ring"></span><img src="assets/img/simbolo-ictdf.png" alt="" width="167" height="150"></div>
+  <svg class="loader__ecg" viewBox="0 0 240 40" preserveAspectRatio="none"><path d="M0 22 H70 L80 22 L88 14 L96 22 L104 22 L110 28 L120 2 L130 38 L136 22 L156 22 L168 16 L180 22 H240"/></svg>
+</div>
+<a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+<div class="topbar">
+  <div class="container">
+    <div class="topbar__info">
+      <span><span class="dot"></span>Central de Marcação <a href="tel:+556134511000"><strong>(61) 3451-1000</strong></a></span>
+      <span class="topbar__hours">Seg. a sex., 7h às 19h</span>
+    </div>
+    <div class="topbar__links">
+      <a href="convenios.html">Convênios</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="https://icdf.empregare.com/pt-br/vagas" target="_blank" rel="noopener">Trabalhe Conosco</a>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <a class="header__logo" href="index.html" aria-label="ICTDF — página inicial">
+      <img src="assets/img/logo-ictdf.png" alt="ICTDF — Instituto de Cardiologia e Transplantes do DF" width="303" height="107">
+    </a>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <a href="index.html" data-nav="home">Início</a>
+      <a href="sobre.html" data-nav="sobre">Sobre</a>
+      <a href="transplantes-e-cardiologia.html" data-nav="servicos">Serviços</a>
+      <a href="ensino.html" data-nav="ensino">Ensino</a>
+      <a href="pesquisa.html" data-nav="pesquisa">Pesquisa</a>
+      <a href="imprensa.html" data-nav="imprensa">Imprensa</a>
+      <a href="contato.html" data-nav="contato">Contato</a>
+      <div class="nav__extra">
+        <a class="btn btn--red btn--block" href="agendamento.html">Agendar consulta ou exame</a>
+        <a class="btn btn--ghost btn--block" href="convenios.html">Convênios aceitos</a>
+      </div>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--ghost" href="convenios.html">Convênios</a>
+      <a class="btn btn--red" href="agendamento.html">Agendar <span class="arrow">→</span></a>
+      <button class="burger" type="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<!-- /@header -->
+
+<main id="conteudo">
+
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Você está em"><a href="index.html">Início</a><span>Agendamento</span></nav>
+      <div class="page-hero__grid">
+        <div data-reveal>
+          <span class="eyebrow">Pré-marcação</span>
+          <h1 class="h1">Agende sua consulta ou <em>exame</em>.</h1>
+        </div>
+        <p class="lead" data-reveal style="--d:.1s">Envie sua solicitação e nossa equipe entra em contato em até 48 horas úteis para confirmar a disponibilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container split split--top">
+      <div class="card" data-reveal data-tabs style="padding:clamp(24px,4vw,44px)">
+        <div class="tabs" role="tablist">
+          <button class="active" data-target="f-consulta" role="tab" aria-selected="true">Consultas</button>
+          <button data-target="f-exame" role="tab" aria-selected="false">Exames</button>
+          <button data-target="f-orcamento" role="tab" aria-selected="false">Orçamento particular</button>
+        </div>
+
+        <div class="tab-panel active" id="f-consulta">
+          <form class="form" data-wa="Pré-marcação de consulta — site ICTDF">
+            <div class="field"><label for="c-nome">Nome completo *</label><input id="c-nome" name="nome" required autocomplete="name"></div>
+            <div class="row">
+              <div class="field"><label for="c-tel">Telefone *</label><input id="c-tel" name="telefone" type="tel" required autocomplete="tel" placeholder="(61) 90000-0000"></div>
+              <div class="field"><label for="c-email">E-mail *</label><input id="c-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="c-esp">Consulta desejada *</label>
+                <select id="c-esp" name="consulta" required>
+                  <option value="">Selecione</option>
+                  <option>Cardiologia Adulto</option><option>Cardiologia Pediátrica</option><option>Arritmia</option><option>Insuficiência Cardíaca</option><option>Doenças Valvares</option><option>Cardiopatia Congênita</option><option>Hipertensão</option><option>Reabilitação Cardíaca</option>
+                </select>
+              </div>
+              <div class="field"><label for="c-conv">Convênio</label><input id="c-conv" name="convenio" placeholder="SUS, particular ou nome do plano"></div>
+            </div>
+            <button class="btn btn--red btn--lg" type="submit">Solicitar agendamento <span class="arrow">→</span></button>
+            <p class="form__ok">Pronto! Sua solicitação foi aberta no WhatsApp da Central. Basta enviar a mensagem.</p>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="f-exame">
+          <form class="form" data-wa="Pré-marcação de exame — site ICTDF">
+            <div class="field"><label for="e-nome">Nome completo *</label><input id="e-nome" name="nome" required autocomplete="name"></div>
+            <div class="row">
+              <div class="field"><label for="e-tel">Telefone *</label><input id="e-tel" name="telefone" type="tel" required autocomplete="tel"></div>
+              <div class="field"><label for="e-email">E-mail *</label><input id="e-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="field"><label for="e-ex">Exame desejado *</label>
+              <select id="e-ex" name="exame" required>
+                <option value="">Selecione</option>
+                <option>Angiotomografia das Artérias Coronárias</option><option>Coleta de Exames Laboratoriais</option><option>Eletrocardiograma</option><option>Ecocardiograma com Doppler Colorido</option><option>Ecocardiograma de Estresse Físico</option><option>Ecocardiograma de Stress com Dobutamina ou Dipiridamol</option><option>Ecodoppler Colorido Transesofágico</option><option>Ecodoppler Colorido de Artérias Carótidas</option><option>Ecodoppler Colorido de Artérias Vertebrais</option><option>Ecodoppler Colorido Fetal</option><option>Holter 24h</option><option>MAPA</option><option>Ressonância Magnética</option><option>Teste Ergométrico Computadorizado</option><option>Tilt-Teste</option><option>Teste de Caminhada</option><option>Tomografia Computadorizada</option>
+              </select>
+            </div>
+            <button class="btn btn--red btn--lg" type="submit">Solicitar agendamento <span class="arrow">→</span></button>
+            <p class="form__ok">Pronto! Sua solicitação foi aberta no WhatsApp da Central. Basta enviar a mensagem.</p>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="f-orcamento">
+          <form class="form" data-wa="Orçamento particular — site ICTDF">
+            <div class="field"><label for="o-nome">Nome completo *</label><input id="o-nome" name="nome" required autocomplete="name"></div>
+            <div class="row">
+              <div class="field"><label for="o-tel">Telefone *</label><input id="o-tel" name="telefone" type="tel" required autocomplete="tel"></div>
+              <div class="field"><label for="o-email">E-mail *</label><input id="o-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="field"><label for="o-msg">Procedimento ou exame *</label><textarea id="o-msg" name="procedimento" required></textarea></div>
+            <button class="btn btn--red btn--lg" type="submit">Solicitar orçamento <span class="arrow">→</span></button>
+            <p class="form__note">Também pelo e-mail credenciamento@ictdf.org.br ou (61) 3403-5424.</p>
+            <p class="form__ok">Pronto! Sua solicitação foi aberta no WhatsApp. Basta enviar a mensagem.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="stack" data-reveal style="--d:.1s">
+        <div class="note-box note-box--red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16v.5"/></svg><span><strong>A pré-marcação é apenas uma solicitação.</strong> Em caso de urgência ou emergência, ligue para (61) 3451-1000 ou procure o pronto atendimento mais próximo.</span></div>
+        <div class="contact-card"><small>Central de Marcação</small><a href="tel:+556134511000">(61) 3451-1000</a><p>Segunda a sexta, das 7h às 19h</p></div>
+        <div class="contact-card"><small>WhatsApp</small><a href="https://wa.me/556191678053" target="_blank" rel="noopener">(61) 9167-8053</a><p>Atendimento por mensagem</p></div>
+        <div class="card card--dark">
+          <h3 class="h3">Preparo para exames</h3>
+          <p>Alguns exames exigem jejum, suspensão de medicamentos ou acompanhante. Confirme as orientações do seu exame com a Central no momento do agendamento.</p>
+        </div>
+        <a class="link-arrow" href="convenios.html">Ver convênios aceitos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- @footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html"><img src="assets/img/logo-ictdf.png" alt="ICTDF" width="303" height="107"></a>
+        <p>Instituição filantrópica de referência em cardiologia e transplantes de órgãos e tecidos. Para que a vida continue acontecendo.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/ictdf_" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/ICTDF.FUC" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.5-1 1-1h2V2.2h-2.8C11.1 2.2 10 4.4 10 6.5v2H7.8V12H10v9.8h4V12h2.8l.4-3.5H14z"/></svg></a>
+          <a href="https://www.linkedin.com/company/ictdf" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2 3.77-2 4.03 0 4.77 2.6 4.77 6V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75V21h-4z"/></svg></a>
+          <a href="https://www.youtube.com/@ictdf" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9L15.5 12l-5.8 3.1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="sobre.html">Sobre o ICTDF</a></li>
+          <li><a href="transplantes-e-cardiologia.html">Transplantes e Cardiologia</a></li>
+          <li><a href="transplantes-e-cardiologia.html#doacao">Doação de órgãos</a></li>
+          <li><a href="pesquisa.html">Pesquisa</a></li>
+          <li><a href="imprensa.html">Imprensa</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ensino</h4>
+        <ul>
+          <li><a href="ensino.html">Centro de Treinamento</a></li>
+          <li><a href="curso-acls.html">Curso ACLS</a></li>
+          <li><a href="curso-bls.html">Curso BLS</a></li>
+          <li><a href="https://rh.cardiologia.org.br/WebCenter2/" target="_blank" rel="noopener">Espaço do Colaborador</a></li>
+          <li><a href="https://icdf.empregare.com/pt-br/vagas" target="_blank" rel="noopener">Trabalhe Conosco</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="tel:+556134511000"><strong>(61) 3451-1000</strong></a>Central de Marcação · seg. a sex., 7h às 19h</li>
+          <li><a href="mailto:ouvidoria@ictdf.org.br">ouvidoria@ictdf.org.br</a></li>
+          <li>St. Sudoeste — Cruzeiro, Brasília/DF<br>CEP 70673-900</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> ICTDF · Instituto de Cardiologia e Transplantes do DF · FUC</span>
+      <nav aria-label="Legal">
+        <a href="termos.html">Termos de Uso</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="transparencia.html">Transparência</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+<a class="wa-float" href="https://wa.me/556191678053" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.9L.1 24l6.3-1.6A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.1-3.6-8.4z"/></svg></a>
+<!-- /@footer -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
